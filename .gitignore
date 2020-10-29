@@ -1,3 +1,16 @@
+# Mac OS
+*.DS_Store
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Maven
+log/
+target/
+resources/
+
 # Compiled class file
 *.class
 
