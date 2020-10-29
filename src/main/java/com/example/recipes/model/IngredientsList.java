@@ -39,7 +39,7 @@ public class IngredientsList {
      *
      * @return the list of ingredients
      */
-    public List<String> getListOfString() {
+    public List<String> convertListToStringList() {
         List<String> arr = list.stream().map(item -> item.toString()).collect(Collectors.toList());
 
         return arr;

@@ -48,6 +48,6 @@ public class IngredientListTest {
         assertEquals("1/2 lb chicken", list1.getIngredientList().get(0).toString());
         assertEquals("4 eggs", list1.getIngredientList().get(2).toString());
         assertEquals("[1/2 lb chicken, 1 cup rice, 4 eggs]",
-                list1.getListOfString().toString());
+                list1.convertListToStringList().toString());
     }
 }
