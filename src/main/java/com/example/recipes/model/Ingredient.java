@@ -4,9 +4,9 @@ package com.example.recipes.model;
  * This class represents a single Ingredient.
  */
 public class Ingredient {
-    private String name;
-    private MeasuringType meas;
     private String qty;
+    private Measuring meas;
+    private String name;
 
     /**
      * Class constructor.
@@ -21,7 +21,7 @@ public class Ingredient {
      * @param name of the ingredient
      */
     public Ingredient(String qty, String meas, String name) {
-        MeasuringType meauring = convertMeasurement(meas);
+        Measuring meauring = convertMeasurement(meas);
 
         this.qty = qty;
         this.meas = meauring;
@@ -45,33 +45,33 @@ public class Ingredient {
      * @param meas measuring name
      * @return measuring enum value
      */
-    private MeasuringType convertMeasurement(String meas) {
-        MeasuringType name;
+    private Measuring convertMeasurement(String meas) {
+        Measuring name;
 
         switch (meas) {
             case "Cup":
-                name = MeasuringType.CUP;
+                name = Measuring.CUP;
                 break;
             case "Tablespoon":
-                name = MeasuringType.TBSP;
+                name = Measuring.TBSP;
                 break;
             case "Teaspoon":
-                name = MeasuringType.TSP;
+                name = Measuring.TSP;
                 break;
             case "Ounce":
-                name = MeasuringType.OZ;
+                name = Measuring.OZ;
                 break;
             case "Pint":
-                name = MeasuringType.PT;
+                name = Measuring.PT;
                 break;
             case "Gallon":
-                name = MeasuringType.GAL;
+                name = Measuring.GAL;
                 break;
             case "Pound":
-                name = MeasuringType.LB;
+                name = Measuring.LB;
                 break;
             default:
-                name = MeasuringType.OTHER;
+                name = Measuring.OTHER;
                 break;
         }
 
@@ -94,7 +94,7 @@ public class Ingredient {
      *
      * @return measuring of the ingredient
      */
-    public MeasuringType getMeasuring() {
+    public Measuring getMeasuring() {
         return meas;
     }
 
@@ -138,7 +138,7 @@ public class Ingredient {
      * @param meas type of the ingredient
      */
     public void setMeasuring(String meas) {
-        MeasuringType meauring = convertMeasurement(meas);
+        Measuring meauring = convertMeasurement(meas);
 
         this.meas = meauring;
     }

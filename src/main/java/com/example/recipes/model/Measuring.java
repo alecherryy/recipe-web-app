@@ -1,7 +1,8 @@
 package com.example.recipes.model;
 
 /**
- * This enum represents the three possible categories for measuring ingredients. It includes:
+ * This enum represents the possible categories for measuring ingredients.
+ * It includes:
  *
  * {@link #CUP} Cup
  * {@link #TBSP} Tablespoon
@@ -11,6 +12,6 @@ package com.example.recipes.model;
  * {@link #LB} Pound
  * {@link #OTHER} Other
  */
-public enum MeasuringType {
+public enum Measuring {
   CUP,TBSP, TSP, OZ, PT, GAL, LB, OTHER
 };

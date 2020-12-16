@@ -47,7 +47,7 @@ public class IngredientTest {
         assertEquals("rice", ingredient2.getName());
         assertNotNull(ingredient2.getName());
         assertEquals("cup", ingredient2.getMeasuringToString());
-        assertEquals(MeasuringType.CUP, ingredient2.getMeasuring());
+        assertEquals(Measuring.CUP, ingredient2.getMeasuring());
         assertEquals("4", ingredient3.getQuantity());
         assertEquals("4 eggs", ingredient3.toString());
     }

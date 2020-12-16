@@ -9,7 +9,7 @@ public class Step {
     /**
      * Class constructor.
      */
-    public Step() {};
+    public Step() {}
 
     /**
      * Overload class constructor with parameters.
@@ -34,7 +34,7 @@ public class Step {
     // SETTER FUNCTIONS
 
     /**
-     * Get content of the recipe step.
+     * Set content of the recipe step.
      *
      * @param content of the step
      */
