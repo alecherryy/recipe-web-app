@@ -24,7 +24,8 @@ public class RecipeTest {
         ArrayList list = new ArrayList<String>();
         list.add("Step 1");
         list.add("Step 2");
-        recipe2 = new Recipe("Scrambled Eggs", "A quick recipe for breakfast eggs",
+        recipe2 = new Recipe("Scrambled Eggs", "Breakfast eggs",
+                "A quick recipe for breakfast eggs",
                 new IngredientsList(), list, Meal.BREAKFAST, Diet.VEGETARIAN);
     }
 
@@ -44,8 +45,8 @@ public class RecipeTest {
     public void testClassMethods() {
         recipe1.setName("Scones");
         assertEquals("Scones", recipe1.getName());
-        recipe1.setDescription("Some scones");
-        assertEquals("Some scones", recipe1.getDescription());
+        recipe1.setShortDescription("Some scones");
+        assertEquals("Some scones", recipe1.getShortDescription());
         recipe1.setDiet("VEGETARIAN");
         assertEquals(Diet.VEGETARIAN, recipe1.getDiet());
         recipe1.setMeal("DESSERT");
@@ -54,10 +55,11 @@ public class RecipeTest {
         list.add("Step 1");
         list.add("Step 2");
         recipe1.setInstructions(list);
-        assertNotNull(recipe1.getDescription());
+        assertNotNull(recipe1.getShortDescription());
         assertEquals("Step 1", recipe1.getInstructions().get(0));
         assertEquals("Scrambled Eggs", recipe2.getName());
-        assertEquals("A quick recipe for breakfast eggs", recipe2.getDescription());
+        assertEquals("Breakfast eggs", recipe2.getShortDescription());
+        assertEquals("A quick recipe for breakfast eggs", recipe2.getLongDescription());
         assertEquals(Meal.BREAKFAST, recipe2.getMeal());
         assertEquals(Diet.VEGETARIAN, recipe2.getDiet());
         assertEquals("Step 1", recipe2.getInstructions().get(0));

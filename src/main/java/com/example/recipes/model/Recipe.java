@@ -8,7 +8,8 @@ import java.util.List;
  */
 public class Recipe {
     private String name;
-    private String description;
+    private String shortDescription;
+    private String longDescription;
     private IngredientsList ingredients = new IngredientsList();
     private ArrayList instructions = new ArrayList<String>();
     private Meal meal;
@@ -23,14 +24,16 @@ public class Recipe {
      * Overload class constructor.
      *
      * @param name of the recipe
-     * @param description of the recipe
+     * @param shortDescription of the recipe
+     * @param longDescription of the recipe
      * @param ingredients of the recipe
      * @param diet choice for the recipe
      * @param meal for the recipe
      */
-    public Recipe(String name, String description, IngredientsList ingredients, ArrayList<String> instructions, Meal meal, Diet diet) {
+    public Recipe(String name, String shortDescription, String longDescription, IngredientsList ingredients, ArrayList<String> instructions, Meal meal, Diet diet) {
         this.name = name;
-        this.description = description;
+        this.shortDescription = shortDescription;
+        this.longDescription = longDescription;
         this.ingredients = ingredients;
         this.instructions = instructions;
         this.diet = diet;
@@ -49,12 +52,22 @@ public class Recipe {
     }
 
     /**
-     * Set description of the recipe.
+     * Set the short description of the recipe; short descriptions do not
+     * exceed 120 characters.
      *
-     * @param description of the recipe
+     * @param shortDescription of the recipe
      */
-    public void setDescription(String description) {
-        this.description = description;
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
+    }
+
+    /**
+     * Set the long description of the recipe.
+     *
+     * @param longDescription of the recipe
+     */
+    public void setDescription(String longDescription) {
+        this.longDescription = longDescription;
     }
 
     /**
@@ -72,7 +85,8 @@ public class Recipe {
     }
 
     /**
-     * Convert string into Ingredient object.
+     * Convert string into Ingredient object. Each ingredient is formatted as
+     * follows: QTY-MEASUREMENT-INGREDIENT
      *
      * @param str containing the ingredient
      *
@@ -164,12 +178,21 @@ public class Recipe {
     }
 
     /**
-     * Get description of the recipe.
+     * Get the short description of the recipe.
      *
-     * @return description of the recipe
+     * @return the short description of the recipe
      */
-    public String getDescription() {
-        return description;
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    /**
+     * Get the long description of the recipe.
+     *
+     * @return the long description of the recipe
+     */
+    public String getLongDescription() {
+        return longDescription;
     }
 
     /**

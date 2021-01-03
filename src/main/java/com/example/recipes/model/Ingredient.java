@@ -17,6 +17,17 @@ public class Ingredient {
      * Overload class constructor with parameters.
      *
      * @param qty amount of the ingredient
+     * @param name of the ingredient
+     */
+    public Ingredient(String qty, String name) {
+        this.qty = qty;
+        this.name = name;
+    }
+
+    /**
+     * Overload class constructor with parameters.
+     *
+     * @param qty amount of the ingredient
      * @param meas measuring of the ingredient
      * @param name of the ingredient
      */
@@ -28,16 +39,6 @@ public class Ingredient {
         this.name = name;
     }
 
-    /**
-     * Overload class constructor with parameters.
-     *
-     * @param qty amount of the ingredient
-     * @param name of the ingredient
-     */
-    public Ingredient(String qty, String name) {
-        this.qty = qty;
-        this.name = name;
-    }
 
     /**
      * Private method to convert str parameter to enum.
