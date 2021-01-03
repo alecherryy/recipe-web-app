@@ -6,6 +6,9 @@
 *.iml
 *.iws
 
+# DB Properties
+src/main/java/resources/
+
 # Maven
 log/
 target/
